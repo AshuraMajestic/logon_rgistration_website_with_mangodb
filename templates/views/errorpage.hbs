@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   {{>header}}
+  </head>
+  <body>
+    {{>navbar}}
+    <!-- Main Header -->
+
+    <div class="container-fluid main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto center">
+          <div class="row">
+            <div class="col-md-8 col-8 mx-auto error404 align-items-center">
+                <figure class="error">
+                  <img src="img/error.png" alt="ashura" class="img-fluid" title="ashuraMajestic">
+                </figure>
+              <p>{{errorMessage}}</p>
+              <div class="button center">
+              <a href="/"><button class="btn registerbtn">Go back</button></a>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer part -->
+   {{>footer}}
+
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    {{>header}}
+  </head>
+  <body>
+    {{>navbar}}
+    <div class="container-fluid main_header">
+      <div class="row my-5">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+            {{! left side }}
+            <div class="col-md-6 col-12 main_header_left angry">
+                 
+                   <div class="row g-1">
+                <div class="col-12 pointer">
+                  <p class="upper">Now this is something i don't like!!😡</p>
+                  <img src="/img/angry.gif" alt="main" class="pointed" />
+                </div>
+                <div class="col-12 more">
+                  <a clas="real" href="/register">
+                    <i class="fas fa-hand-point-left"></i>
+                    Register Now
+                    </a>
+                </div>
+              </div>
+                </div>
+            {{! right side }}
+            <div class="col-md-6 col-12 main_header_right">
+                <div class="background login">
+              <form class="login_form" action="/login" method="POST">
+              <div class="col-12 heading">
+                <h1>Login Form</h1>
+              </div>
+              <div class="col-12 image">
+              <i class="fas fa-dice-d20"></i>
+              </div>
+                <div class="col-12 enroll_no">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputFirst"
+                    name="enroll"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="inputenroll" class="form-label">Enrollment Number</label>
+                </div>
+                <div class="col-12 password"><input
+                    type="password"
+                    class="form-control"
+                    id="inputpass"
+                    name="password"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="inputpass" class="form-label">Password</label></div>
+                 <div class="col-12 button">
+                    <button
+                      type="submit"
+                      class="btn registerbtn"
+                    >Login</button>
+                  </div>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{>footer}}
+  </body>
+</html>

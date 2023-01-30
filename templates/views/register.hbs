@@ -1,0 +1,162 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    {{>header}}
+  </head>
+  <body>
+    {{>navbar}}
+    <div class="container-fluid main_header">
+      <div class="row my-5">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+
+            {{! left side }}
+            <div class="col-md-6 col-12 main_header_left">
+              <div class="background">
+                <form class="row g-4" action="/register" method="POST">
+                  <div class="col-md-12">
+                    <h1 class="heading">Register Now</h1>
+                  </div>
+                  <div class="col-md-4 name">
+                    <input
+                      autocomplete="off"
+                      type="text0"
+                      class="form-control"
+                      id="inputFirst"
+                      name="firstname"
+                    />
+                    <label for="inputFirst" class="form-label">First Name</label>
+                  </div>
+                  <div class="col-md-4 name">
+                    <input
+                      autocomplete="off"
+                      type="text"
+                      class="form-control"
+                      id="inputMiddle"
+                      name="middlename"
+                    />
+                    <label for="inputMiddle" class="form-label">Middle Name</label>
+                  </div>
+                  <div class="col-md-4 name">
+                    <input
+                      autocomplete="off"
+                      type="text"
+                      class="form-control"
+                      id="inputLast"
+                      name="lastname"
+                    />
+                    <label for="inputLast" class="form-label">Last Name</label>
+                  </div>
+                  <div class="col-md-6 gender">
+                    <label class="form-check-label male">Male</label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Male"
+                      class="form-check-input genderm"
+                      input="gender"
+                    />
+                    <label
+                      for="Male"
+                      class="form-check-label female"
+                    >Female</label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="FeMale"
+                      class="form-check-input genderm"
+                      id="gender"
+                    />
+                  </div>
+                  <div class="col-md-6 enrollment">
+                    <input
+                      autocomplete="off"
+                      type="text"
+                      name="enroll"
+                      class="form-control"
+                      id="inputRoll"
+                    />
+                    <label for="inputRollnumber" class="form-label">Enrollment
+                      Number</label>
+                  </div>
+                  <div class="col-md-6 email name">
+                    <input
+                      autocomplete="off"
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      id="inputUser"
+                    />
+                    <label for="inputUser" class="form-label">Email</label>
+                  </div>
+                  <div class="col-md-6 name">
+                    <input
+                      autocomplete="off"
+                      type="text"
+                      name="city"
+                      class="form-control"
+                      id="inputAddress"
+                    />
+                    <label for="inputaddress" class="form-label">City You Live
+                      in</label>
+                  </div>
+
+                  <div class="col-md-6 password name">
+                    <input
+                      name="password"
+                      type="password"
+                      class="form-control"
+                      id="inputPassword"
+                      autocomplete="off"
+                    />
+                    <label
+                      for="inputPassword"
+                      class="form-label"
+                    >Password</label>
+                  </div><div class="col-md-6 name">
+                    <input
+                      name="confirmpassword"
+                      type="password"
+                      class="form-control"
+                      id="inputCXonfirmPassword"
+                      autocomplete="off"
+                    />
+                    <label for="inputPassword" class="form-label">Confirm
+                      Password</label>
+                  </div>
+
+                  <div class="col-12 center">
+                    <button
+                      type="submit"
+                      class="btn registerbtn"
+                    >Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            {{! right side }}
+            <div class="col-md-6 col-12 register">
+              <div class="row g-1">
+                <div class="col-12 pointer">
+                  <p class="upper">What you are already ours ? Warui!! Warui!!</p>
+                  <img src="/img/ccol.gif" alt="main" class="pointed" />
+                </div>
+                <div class="col-12 more">
+                  <a clas="real" href="/login">
+                    Login Now
+                    <i class="fas fa-hand-point-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {{>footer}}
+  </body>
+</html>

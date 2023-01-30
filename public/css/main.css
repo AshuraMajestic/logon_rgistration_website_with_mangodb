@@ -1,0 +1,814 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+:root {
+  --i: 45;
+}
+
+:root {
+  --bg_color: #0b0c10;
+  --text_color: #c5c6c7;
+  --symbol_color: #66fcf1;
+  --Border_color: #45a29e;
+  --Body_Color: #1f2833;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+html body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Body_Color);
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin: 0;
+}
+
+.main_menu {
+  background-color: var(--bg_color);
+}
+
+.navbar {
+  height: 15vh;
+  color: var(--text_color);
+  background-color: var(--bg_color);
+  padding: 2rem 0;
+}
+.navbar ul {
+  height: 15vh;
+  display: flex;
+}
+.navbar li {
+  align-self: flex-end;
+  padding-bottom: 1rem;
+  margin-left: 2rem;
+}
+.navbar a {
+  color: var(--text_color);
+  font-size: 1.8rem;
+}
+.navbar a:hover {
+  color: var(--symbol_color);
+}
+.navbar .navbar-toggler {
+  background-color: grey;
+}
+.navbar .navbar-brand {
+  font-family: "Caveat", "cascadia code";
+  font-weight: bold;
+  color: var(--symbol_color);
+  font-size: 5.3rem;
+  text-align: center;
+}
+.navbar .navbar-brand .cool {
+  display: block;
+  margin-top: -2rem;
+  font-size: 2rem;
+  color: var(--text_color);
+}
+
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 100vh !important;
+  }
+}
+
+/* index body */
+
+.main_header_left {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main_header_left p {
+  font-size: 2rem;
+  color: #66fcf1;
+}
+
+.main_header_left h1 {
+  font-size: 4rem;
+  margin: 1rem 0 4rem 0;
+  text-transform: capitalize;
+  color: #66fcf1;
+}
+
+.main_header_left .text_clr {
+  color: white;
+}
+
+.main_header_left button {
+  position: relative;
+  width: 11em;
+  height: 4em;
+  outline: none;
+  transition: 0.1s;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: #66fcf1;
+}
+#clip {
+  --color: white;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px double var(--color);
+  box-shadow: inset 0px 0px 15px WHITE;
+  -webkit-clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+.arrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: #fff;
+  top: 35%;
+  width: 11%;
+  height: 30%;
+}
+
+#leftArrow {
+  left: -13.5%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+  clip-path: polygon(100% 49%, 0 0, 0 100%);
+  left: 102%;
+}
+
+button:hover #rightArrow {
+  background-color: #27c39f;
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+button:hover #leftArrow {
+  background-color: #27c39f;
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 8px #2781c3;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+#rightTop {
+  top: -1.98em;
+  left: 91%;
+}
+
+#leftTop {
+  top: -1.96em;
+  left: -3em;
+}
+
+#leftBottom {
+  top: 2.1em;
+  left: -2.15em;
+}
+
+#rightBottom {
+  top: 45%;
+  left: 88%;
+}
+button:hover {
+  color: white;
+}
+
+button:hover #leftTop {
+  animation: 0.1s ease-in-out 0.05s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightTop {
+  animation: 0.1s ease-in-out 0.15s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightBottom {
+  animation: 0.1s ease-in-out 0.25s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #leftBottom {
+  animation: 0.1s ease-in-out 0.35s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+button:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: #27c39f;
+}
+
+@keyframes changeColor8 {
+  from {
+    background-color: #2781c3;
+  }
+
+  to {
+    background-color: #27c39f;
+  }
+}
+
+@keyframes lightEffect8 {
+  from {
+    box-shadow: 1px 1px 5px #27c39f;
+  }
+
+  to {
+    box-shadow: 0 0 2px #27c39f;
+  }
+}
+
+@keyframes greenLight8 {
+  from {
+  }
+
+  to {
+    box-shadow: inset 0px 0px 32px #27c39f;
+  }
+}
+
+@keyframes leftArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes rightArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+/* right side */
+
+.main_header_right {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main_header_right .scene {
+  width: 21rem;
+  height: 70vh;
+  margin-left: 20rem;
+  position: relative;
+  perspective: 100rem;
+}
+
+.main_header_right .scene .carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+.carousel_cell {
+  position: absolute;
+  width: 19rem;
+  height: 50vh;
+  left: 1rem;
+  top: 7rem;
+}
+
+.carousel_cell img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel_cell:nth-child(1) {
+  transform: rotateY(0deg) translateZ(253px);
+}
+.carousel_cell:nth-child(2) {
+  transform: rotateY(45deg) translateZ(253px);
+}
+.carousel_cell:nth-child(3) {
+  transform: rotateY(90deg) translateZ(253px);
+}
+.carousel_cell:nth-child(4) {
+  transform: rotateY(135deg) translateZ(253px);
+}
+.carousel_cell:nth-child(5) {
+  transform: rotateY(180deg) translateZ(253px);
+}
+.carousel_cell:nth-child(6) {
+  transform: rotateY(225deg) translateZ(253px);
+}
+.carousel_cell:nth-child(7) {
+  transform: rotateY(270deg) translateZ(253px);
+}
+.carousel_cell:nth-child(8) {
+  transform: rotateY(315deg) translateZ(253px);
+}
+
+@keyframes animate {
+  from {
+    transform: perspective(300rem) rotateY(0deg);
+  }
+  to {
+    transform: perspective(300rem) rotateY(360deg);
+  }
+}
+
+/* footer */
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  height: 10vh;
+  background-color: #0b0c10;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer h1 {
+  position: absolute;
+  right: 8rem;
+  color: #27c39f;
+  font-weight: 900;
+  font-family: "Cascadia code", "Arial Narrow", Arial, sans-serif;
+}
+
+.footer .contact .insta {
+  position: absolute;
+  left: 3rem;
+  top: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+.footer .contact .insta img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.footer .contact .git {
+  position: absolute;
+  left: 22rem;
+  top: 0;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+.footer .contact .git img {
+  height: 6rem;
+  width: 6rem;
+}
+
+/* register  */
+
+.background {
+  width: 120%;
+  height: 100%;
+  background: #07182e;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 200%;
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 183, 255),
+    rgb(255, 48, 255)
+  );
+  animation: rotate 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 1rem;
+  border-radius: 15px;
+}
+
+/* form  */
+
+.background form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  overflow: visible;
+}
+.background .heading {
+  height: 5%;
+}
+.background .name,
+.enrollment {
+  height: 10%;
+  position: relative;
+}
+.background .name:first-child {
+  padding-left: 1rem;
+}
+
+.background .name:last-child {
+  padding-right: 1rem;
+}
+
+.background .name label,
+.background .enrollment label {
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  margin-left: 3rem;
+  color: white;
+}
+
+.background .name input,
+.background .enrollment input {
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 0;
+  margin-top: 3rem;
+  background-color: #66fcf1;
+  color: #66fcf1;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-right: 1.6rem;
+}
+
+.background .name input:focus,
+.background .enrollment input:focus {
+  height: 80%;
+  margin-top: 1rem;
+  color: black;
+}
+
+.background .name input:focus + label,
+.background .enrollment input:focus + label {
+  transform: translateY(-2.5rem);
+  color: #66fcf1;
+}
+.gender {
+  padding-top: 1rem;
+  height: 10%;
+}
+
+.male,
+.female {
+  font-size: 1.6rem;
+  color: white;
+  margin-left: 3rem;
+}
+.gender .genderm {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.3rem;
+  margin-left: 0.5rem;
+}
+.gender .genderm:checked {
+  background-color: #66fcf1;
+}
+
+.checkin {
+  height: 5%;
+}
+.checkin {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.background .checkin .checking {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 2rem;
+  box-shadow: none;
+  cursor: pointer;
+}
+.background .checkin .checking:checked {
+  background-color: #66fcf1;
+  border: none;
+  box-shadow: none;
+}
+
+.background .checkin label {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  color: wheat;
+  font-weight: bolder;
+}
+
+/* right side */
+.register .pointed {
+  width: 25rem;
+  height: 25rem;
+  margin-left: 20rem;
+  animation: float 1s linear infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+.register .pointer p {
+  margin-left: 10rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+.register .more a {
+  margin-left: 20rem;
+  font-size: 5rem;
+  text-decoration: none;
+  color: white;
+}
+.register .more a:hover {
+  color: #27c39f;
+  filter: drop-shadow(16px 16px 10px black);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registerbtn {
+  padding: 0.8em 1.8em;
+  border: 1rem solid #17c3b2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17c3b2;
+}
+
+.registerbtn::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #17c3b2;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.registerbtn:hover::before {
+  width: 105%;
+}
+
+.registerbtn:hover {
+  color: #111;
+}
+
+/* login page css */
+
+/* right side */
+.login {
+  width: 100%;
+}
+
+.login_form {
+  z-index: 3;
+}
+
+.login_form .heading {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_form .heading h1 {
+  color: #27c39f;
+  font-weight: 900;
+  font-family: "cascadia code";
+  font-size: 3rem;
+}
+.login_form .heading h1:hover {
+  filter: drop-shadow(16px 1rem 5px black);
+  cursor: pointer;
+}
+.login_form .image {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_form .image i {
+  font-size: 6rem;
+  color: white;
+}
+.login_form .image i:hover{
+  color:#17c3b2;
+  filter: drop-shadow(1.6rem 1rem .5rem black);
+}
+
+
+.login_form .enroll_no {
+  margin-top: 7rem;
+}
+
+.login_form .enroll_no,
+.login_form .password {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_form .enroll_no input,
+.login_form .password input {
+  transition: all 0.5s ease;
+  width: 50%;
+  height: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color:#17c3b2;
+  background-color: #17c3b2;
+}
+.login_form .enroll_no label,
+.login_form .password label {
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5rem;
+}
+.login_form .enroll_no input:focus,
+.login_form .password input:focus {
+  height: 70%;
+  color: white;
+}
+.login_form .enroll_no input:focus + label,
+.login_form .password input:focus + label {
+margin-bottom: 7.6rem;
+font-weight: 700;
+}
+
+.login_form .button {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form .button button{
+  width:60%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  color:#27c39f;
+}
+.login_form .button .registerbtn:hover {
+  color: #111;
+}
+
+
+
+/* right side login page */
+
+.angry .pointed {
+  width: 25rem;
+  height: 25rem;
+  margin-left: 8rem;
+  animation: float 1s linear infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+.angry .pointer p {
+  margin-left: 7rem;
+  font-size: 2rem;
+  color: white;
+}
+.angry .more a {
+  margin-left: 7rem;
+  font-size: 5rem;
+  text-decoration: none;
+  color: white;
+}
+.angry .more a:hover {
+  color: #27c39f;
+  filter: drop-shadow(16px 16px 10px black);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error img{
+  width:80%;
+  height: 70%;
+  margin-top: -4rem;
+}
+
+.error404 p{
+  height:5%;
+  width: 100%;
+  color:white;
+  font-size: 3rem;
+  text-align: center;
+  margin-left: -6rem;
+  margin-top: -2rem;
+}
+.error404 .button{
+  width: 100%;
+  height:30%;
+  margin-left: -6rem;
+}
+.error404 button{
+color: white;
+border:1px black solid;
+}
